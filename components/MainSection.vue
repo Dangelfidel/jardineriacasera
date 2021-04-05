@@ -1,5 +1,5 @@
 <template>
-  <main class="section page-main-section">
+  <main class="section page-main-section" style="padding-top: 5px">
     <div class="container">
       <div class="columns">
         <aside
@@ -53,7 +53,7 @@ export default {
 
 <style lang="scss">
 .page-main-section {
-  margin-top: 52px;
+  margin-top: 5px;
 }
 .hero + .page-main-section {
   margin-top: initial;

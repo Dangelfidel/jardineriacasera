@@ -1,12 +1,16 @@
 <template>
-  <section :class="`hero is-medium hero-theme-${computedTheme}`">
+  <section
+    style="background:none !important"
+    :class="`hero is-large hero-theme-${computedTheme} p`"
+  >
     <img
+      style="max-height: 40rem"
       class="hero-bg-img"
       :src="responsiveImage.src"
       :lazy="false"
       :srcset="responsiveImage.srcSet"
     />
-    <div class="hero-body">
+    <div class="hero-body" style="padding-top:-5rem">
       <div class="container">
         <h1 class="title animated fadeInUp">
           {{ title }}
@@ -15,12 +19,6 @@
           {{ subtitle }}
         </h2>
         <br />
-        <div
-          v-if="$slots.default"
-          class="under-subtitle animated fadeInDown slower"
-        >
-          <slot />
-        </div>
       </div>
     </div>
   </section>
@@ -127,8 +125,6 @@ export default {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.65);
-    position: absolute;
   }
   .hero-body {
     position: relative;
